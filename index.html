@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JokenPô Devclub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>JokenPô</h1>
+
+        <div class="buttons"> <!-- Adicionando essa div, os botões ficaram em linha-->
+            <button id="rock" onclick="playHuman('rock')">&#x1F44A;</button>
+            <button id="paper" onclick="playHuman('paper')">&#x1F590;</button>
+            <button id="scissors" onclick="playHuman('scissors')">&#x270C;</button>
+        </div>
+
+        <p>x</p>
+
+        <div class="human-container">
+            <h2>Player</h2>
+            <div class="human-img">
+            <img width="50" src="./assets/paper.png" alt="">
+        </div>
+        </div>
+
+        <div class="machine-container">
+            <h2>Machine</h2>
+            <div class="machine-img">
+            <img width="50" src="./assets/paper.png" alt="">
+            </div>
+        </div>
+
+
+
+
+
+        <p class="result"></p>
+        <div class="your-score" >
+            <p>Player Score <span id="human-score">0</span></p>
+        </div>
+        
+        <div class="machine-score">
+            <p>Machine Score <span id="machine-score">0</span></p>
+        </div>
+
+        <img class="lose-img" src="./assets/loserNew.png" alt="lose-img">
+
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+    <script src="scripts.js"></script>
+</body>
+
+
+
+</html>
