@@ -1,8 +1,9 @@
 const result = document.querySelector('.result')
 const humanScore = document.querySelector('#human-score')
 const machineScore = document.querySelector('#machine-score')
-const humanImg = document.querySelector('.human-img')
-const machineImg = document.querySelector('.machine-img')
+const humanImg = document.querySelector('.img-human')
+const machineImg = document.querySelector('.img-machine')
+const resultImg = document.querySelector('.lose-img')
 
 
 let humanScoreNumber = 0
@@ -16,6 +17,7 @@ const playHuman = (humanChoice) => {
 const playMachine = () => {
     const choices = ['rock', 'paper', 'scissors']
     const randomNumber = Math.floor(Math.random() * 3)
+    machineImg.src=`./assets/${choices[randomNumber]}.png`
 
     return choices[randomNumber]
 }
@@ -25,6 +27,8 @@ const playTheGame = (human, machine) => {
 
     if (human === machine) {
         result.innerHTML = 'Empate'
+        resultImg.src = './assets/tieImgNew.png'
+    
 
     } else if (
         (human === 'rock' && machine === 'scissors') ||
@@ -34,6 +38,7 @@ const playTheGame = (human, machine) => {
         humanScoreNumber++
         humanScore.innerHTML = humanScoreNumber
         result.innerHTML = 'Vitória'
+        resultImg.src = './assets/TrophyXboxNew.png'
 
 
 
@@ -41,6 +46,7 @@ const playTheGame = (human, machine) => {
         machineScoreNumber++
         machineScore.innerHTML = machineScoreNumber
         result.innerHTML = 'Derrota'
+        resultImg.src = './assets/loserNew.png'
     }
 
 }
