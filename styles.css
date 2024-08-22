@@ -107,60 +107,98 @@ p {
 
 }
 
-.human-container{
+.human-container {
     position: absolute;
     left: 50px;
     top: 200px;
-    
-}
-
-.human-img{
-background-color: #080808;
-border-radius:50%;
-display: flex;
-align-items: center;
-justify-content: center;
-
 
 }
 
-.machine-container{
-    position: absolute;
-    right:50px;
-    top: 200px;
-    width:5.5vw;
-    
-    
-    
-}
-
-.machine-img{
+.human-img {
     background-color: #080808;
-    border-radius:50%;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    
-    
-    
-    }
 
-.your-score{
+
+}
+
+.machine-container {
+    position: absolute;
+    right: 50px;
+    top: 200px;
+    width: 5.5vw;
+
+
+
+}
+
+.machine-img {
+    background-color: #080808;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+}
+
+.your-score {
     position: absolute;
     left: 50px;
     top: 260px;
 
 }
 
-.machine-score{
+.machine-score {
     position: absolute;
-    right:50px;
+    right: 50px;
     top: 260px;
-    
-    
+
+
 
 }
 
+@media (max-width: 700px) {
 
+    .container {
+        min-height: 80vh;
+        max-width: 90vw;
+    }
 
+    .buttons {
+        gap: 40px;
+    }
 
+    .machine-container {
+        position: relative;
+        right: 0;
+        top: 110px;
+        width: 20vw;
+
+    }
+    .machine-score{
+        position: absolute;
+        left: 50px;
+        top: 290px;
+        
+        
+    
+    }
+
+    .human-container {
+        left: 130px;
+        margin-bottom: 20px;
+    }
+
+    .lose-img {
+        width: 100px;
+        position: absolute;
+        right: 120px;
+        top: 425px;
+
+    }
+
+}
