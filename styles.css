@@ -179,13 +179,11 @@ p {
         width: 20vw;
 
     }
-    .machine-score{
+
+    .machine-score {
         position: absolute;
         left: 50px;
         top: 290px;
-        
-        
-    
     }
 
     .human-container {
