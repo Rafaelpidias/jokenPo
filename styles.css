@@ -128,11 +128,9 @@ p {
     position: absolute;
     right: 50px;
     top: 200px;
-    width: 5.5vw;
-
-
 
 }
+
 
 .machine-img {
     background-color: #080808;
@@ -140,8 +138,6 @@ p {
     display: flex;
     align-items: center;
     justify-content: center;
-
-
 
 }
 
@@ -156,8 +152,6 @@ p {
     position: absolute;
     right: 50px;
     top: 260px;
-
-
 
 }
 
@@ -176,7 +170,8 @@ p {
         position: relative;
         right: 0;
         top: 150px;
-        width: 20vw;
+        min-width: 20vw;
+        max-width: 20vw;
 
     }
 
