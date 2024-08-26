@@ -9,13 +9,19 @@ const resultImg = document.querySelector('.lose-img')
 let humanScoreNumber = 0
 let machineScoreNumber = 0
 
+const GAME_OPTIONS = {
+    ROCK: 'rock',
+    PAPER: 'paper',
+    SCISSORS:'scissors'
+}
+
 const playHuman = (humanChoice) => {
     humanImg.src=`./assets/${humanChoice}.png`
     playTheGame(humanChoice, playMachine())
 }
 
 const playMachine = () => {
-    const choices = ['rock', 'paper', 'scissors']
+    const choices = [GAME_OPTIONS.ROCK, GAME_OPTIONS.PAPER, GAME_OPTIONS.SCISSORS]
     const randomNumber = Math.floor(Math.random() * 3)
     machineImg.src=`./assets/${choices[randomNumber]}.png`
 
@@ -31,9 +37,9 @@ const playTheGame = (human, machine) => {
     
 
     } else if (
-        (human === 'rock' && machine === 'scissors') ||
-        (human === 'scissors' && machine === 'paper') ||
-        (human === 'paper' && machine === 'rock')) {
+        (human === GAME_OPTIONS.ROCK && machine === GAME_OPTIONS.SCISSORS) ||
+        (human === GAME_OPTIONS.SCISSORS && machine === GAME_OPTIONS.PAPER) ||
+        (human === GAME_OPTIONS.PAPER && machine === GAME_OPTIONS.ROCK)) {
 
         humanScoreNumber++
         humanScore.innerHTML = humanScoreNumber
